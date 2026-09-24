@@ -1,4 +1,187 @@
-panel-industrial/
-├── index.html
-├── styles.css
-└── app.js
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Panel Industrial</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+
+    <div>
+        <h1>Panel Industrial</h1>
+        <span>Sistema de gestión de planta</span>
+    </div>
+
+    <span id="fecha"></span>
+
+</header>
+
+
+<main>
+
+    <!-- KPIs -->
+
+    <section class="kpis">
+
+        <div class="kpi">
+            <div class="kpi-title">OEE</div>
+            <div class="kpi-value kpi-warning">78,4 %</div>
+        </div>
+
+        <div class="kpi">
+            <div class="kpi-title">Producción</div>
+            <div class="kpi-value kpi-good">96,2 %</div>
+        </div>
+
+        <div class="kpi">
+            <div class="kpi-title">Merma</div>
+            <div class="kpi-value kpi-danger">2,1 %</div>
+        </div>
+
+        <div class="kpi">
+            <div class="kpi-title">Calidad</div>
+            <div class="kpi-value kpi-good">98,2 %</div>
+        </div>
+
+    </section>
+
+
+    <!-- PROBLEMAS CRÍTICOS -->
+
+    <section class="section">
+
+        <div class="section-header">
+            <h2>🔴 Problemas críticos</h2>
+            <span>3 abiertos</span>
+        </div>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Problema</th>
+                    <th>Área</th>
+                    <th>Prioridad</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Paradas repetitivas en línea C38</td>
+                    <td>Mantenimiento</td>
+                    <td>
+                        <span class="badge critical">CRÍTICA</span>
+                    </td>
+                    <td>
+                        <span class="badge progress">En análisis</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Desviación de merma en producción</td>
+                    <td>Producción</td>
+                    <td>
+                        <span class="badge high">ALTA</span>
+                    </td>
+                    <td>
+                        <span class="badge progress">En análisis</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Diferencias de inventario</td>
+                    <td>Almacén</td>
+                    <td>
+                        <span class="badge high">ALTA</span>
+                    </td>
+                    <td>
+                        <span class="badge progress">Pendiente</span>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+    <!-- ACCIONES -->
+
+    <section class="section">
+
+        <div class="section-header">
+            <h2>📋 Acciones pendientes</h2>
+            <span>7 pendientes</span>
+        </div>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Acción</th>
+                    <th>Responsable</th>
+                    <th>Fecha límite</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Analizar causa raíz C38</td>
+                    <td>Mantenimiento</td>
+                    <td>26/09/2026</td>
+                    <td>
+                        <span class="badge progress">En curso</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Revisar estándar de limpieza</td>
+                    <td>Producción</td>
+                    <td>27/09/2026</td>
+                    <td>
+                        <span class="badge high">Pendiente</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Revisar movimientos de almacén</td>
+                    <td>Logística</td>
+                    <td>30/09/2026</td>
+                    <td>
+                        <span class="badge progress">En curso</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Actualizar matriz de competencias</td>
+                    <td>Dirección</td>
+                    <td>02/10/2026</td>
+                    <td>
+                        <span class="badge high">Pendiente</span>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</main>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
